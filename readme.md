@@ -120,14 +120,12 @@ The `polybius()` function in the `src/polybius.js` file has two parameters:
 - _input_ is a string that refers to the inputted text to be encoded or decoded.
 - _encode_ is a boolean that refers to whether you should encode or decode the message. By default it is set to `true`.
 
-When building the function, keep the following constraints and rules in mind:
+The following should also hold true:
 
-- You are welcome to assume that _no additional symbols will be included as part of the input._ Only spaces and letters will be included.
-- When encoding, your output should _still be a string._
-- When decoding, the number of characters in the string _excluding spaces_ should be even. Otherwise, return `false`.
-- Spaces in the message should be maintained before and after encoding or decoding.
+- When decoding, the number of characters in the string _excluding spaces_ should be even. Otherwise, the function will return `false`.
+- Spaces in the message will be maintained before and after encoding or decoding.
 - Encoding is case-insensitive (e.g., both "a" or "A" would be encoded to the same result).
-- The letters "I" and "J" share a space. When encoding, both letters can be converted to `42`, but when decoding, both letters should be shown as `"(i/j)"`.
+- The letters "I" and "J" share a space. When encoding, both letters can be converted to `42`, but when decoding, both letters will be shown as `"(i/j)"`.
 
 #### Examples
 
@@ -139,7 +137,7 @@ polybius("3251131343 2543241341", false); //> "hello world"
 polybius("4432423352125413", false); //> "th(i/j)nkful
 polybius("44324233521254134", false); //> false
 ```
-
+------------------- THIS PART STILL NEED WORK--------------------------------
 ### Substitution Cipher
 
 ![Substitution cipher](./docs/substitution.jpeg)
